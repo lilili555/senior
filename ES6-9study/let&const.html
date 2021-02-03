@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //let和const声明变量
+        //es5  生命变量用var  存在变量提升，污染全局
+        // console.log(a);//undefined
+        // var a = 3;
+        // console.log(a);//3
+        //1、let变量不存在变量提升，属于块级作用域
+        //2、let 不允许重复声明
+
+
+        //const声明变量 一旦声明 ，立刻赋值
+
+
+        //为什么需要块级作用域
+        //1、内层变量可能会覆盖外层变量  全局污染
+        //2、解决循环计数时，var定义的变量存在提升的问题
+        //使用闭包解决循环计数的问题
+        //
+
+        // var arr = [];
+        // for (var i = 0; i < 10; i++) {
+        //     arr[i] = function() {
+        //         return i
+        //     }
+        // }
+        // console.log(arr)
+        // console.log(arr[2]())
+
+        // var arr = [];
+        // for (var i = 0; i < 10; i++) {
+        //使用闭包
+        //     arr[i] = (function(n) {
+        //         return function() {
+        //             return n;
+        //         }
+        //     })(i)
+        // }
+        // console.log(arr[2]())
+        //使用let解决循环计数问题
+        var arr = [];
+        for (let i = 0; i < 10; i++) {
+            arr[i] = function() {
+                return i
+            }
+        }
+        console.log(arr)
+        console.log(arr[2]())
+
+        //let声明的变量可以被修改 ， const一旦声明立刻赋值
+        //默认情况下 使用const，只有变量需要被修改的时候使用let
+    </script>
+</body>
+
+</html>
