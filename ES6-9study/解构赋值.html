@@ -48,6 +48,20 @@
         };
         fn(20)
         fn(20, 50)
+
+        //解构赋值的用途
+        //提取json对象中的值
+        let jsondata = {
+            id: 42,
+            status: 'ok',
+            data: [8743, 21]
+        };
+        let {
+            id,
+            status,
+            data: aaa //给data起了一个别名aaa，也就是将data的值赋值给aaa
+        } = jsondata;
+        console.log(id, status, aaa)
     </script>
 </body>
 
