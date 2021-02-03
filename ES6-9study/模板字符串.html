@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+
+    <p></p>
+    <script>
+        const oBox = document.getElementById('app');
+        const id = 1,
+            name = '小马哥';
+        const htmlTel = `
+        <ul>
+            <li>
+                id:${id},
+                name:${name}
+            </li>
+        </ul>
+        
+        `;
+        oBox.innerHTML = htmlTel;
+    </script>
+</body>
+
+</html>
