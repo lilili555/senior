@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>0
+</head>
+
+<body>
+
+    <script>
+        //1、解构赋值
+        // const [a, b, c] = [1, 2, 3] //完全解构
+        // console.log(a, b, c);
+        // const [name] = ['张三', 18];
+        // console.log(name);
+        //2、对象解构
+        // const {
+        //     name,
+        //     age
+        // } = {
+        //     name: '小马哥',
+        //     age: 18
+        // }
+        // console.log(name, age)
+        // const obj = {
+        //     a: {
+        //         name: 'zhangsaan'
+        //     },
+        //     b: '',
+        //     c: []
+        // };
+        // const {
+        //     a,
+        //     ...res //此...用于剩余运算符
+        // } = obj;
+        // console.log(a, res);
+        // const {
+        //     e,
+        //     f = 10
+        // } = {
+        //     e: 20
+        // }
+        // console.log(e, f)//不完全解构，可以设置一个默认值
+        function fn(e, f = 10) {
+            console.log(f);
+        };
+        fn(20)
+        fn(20, 50)
+    </script>
+</body>
+
+</html>
